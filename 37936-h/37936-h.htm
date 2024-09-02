@@ -1,0 +1,2081 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.1//EN'
+  'http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Dopo il veglione o viceversa</title>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg common docutils stylesheet.
+
+  This stylesheet contains styles common to HTML and EPUB.  Put styles
+  that are specific to HTML and EPUB into their relative stylesheets.
+
+  :Author: Marcello Perathoner (webmaster@gutenberg.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  This stylesheet is based on:
+
+  :Author: David Goodger (goodger@python.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  Default cascading style sheet for the HTML output of Docutils.
+
+  */
+
+  /* ADE 1.7.2 chokes on !important and throws all css out. */
+
+  /* FONTS */
+
+  .italics    { font-style: italic }
+  .bold       { font-weight: bold }
+  .small-caps { }
+  .gesperrt   { }
+  .antiqua    { font-style: italic } /* what else can we do ? */
+  .monospaced { font-family: monospace }
+
+  .smaller    { font-size: smaller }
+  .larger     { font-size: larger }
+
+  .xx-small   { font-size: xx-small }
+  .x-small    { font-size: x-small }
+  .small      { font-size: small }
+  .medium     { font-size: medium }
+  .large      { font-size: large }
+  .x-large    { font-size: x-large }
+  .xx-large   { font-size: xx-large }
+
+  .text-transform-uppercase { text-transform: uppercase }
+  .text-transform-lowercase { text-transform: lowercase }
+  .text-transform-none      { text-transform: none }
+
+  .red        { color: red }
+  .green      { color: green }
+  .blue       { color: blue }
+  .yellow     { color: yellow }
+  .white      { color: white }
+  .gray       { color: gray }
+  .black      { color: black }
+
+  /* ALIGN */
+
+  .left       { text-align: left }
+  .center     { text-align: center }
+  .right      { text-align: right }
+  .justify    { text-align: justify }
+
+  /* LINE HEIGHT */
+
+  body        { line-height: 1.5 }
+  p           { margin: 1.5em 0 }
+
+  /* PAGINATION */
+
+  .title, .subtitle     { page-break-inside: avoid;
+                        page-break-after:  avoid }
+  .titlepage, 
+  #pg-header            { page-break-inside: avoid }
+
+  /* SECTIONS */
+
+  body         { text-align: justify }
+
+  p.noindent   { text-indent: 0 }
+
+  .boxed       { border: 1px solid black; padding: 1em }
+  .topic       { margin: 5% 0; border: 1px solid black; padding: 1em }
+  div.section  { clear: both }
+
+  div.line-block       { margin: 1.5em 0 }  /* same leading as p */
+  div.line-block.inner { margin: 0 0 0 10% }
+  div.line             { margin-left: 20%; text-indent: -20%; }
+  .line-block.noindent div.line { margin-left: 0; text-indent: 0; }
+
+  hr.docutils  { margin: 1.5em 40%; border: none; border-bottom: 1px solid black; }
+
+  .clearpage,
+  .cleardoublepage,
+  .vfill,
+  .vspace      { border: 0px solid white }
+
+  .title               { margin: 1.5em 0 }
+  .title.with-subtitle { margin-bottom: 0 }
+  .subtitle            { margin: 1.5em 0 }
+
+  /* ugly hack to give more specifity. 
+   because ADE chokes on !important */
+  .first.first { margin-top: 0 } 
+  .last.last   { margin-bottom: 0 }
+
+  /* header font style */
+  /* http://dev.w3.org/csswg/css3-fonts/#propdef-font-size */
+
+  h1.title                     { font-size: 200%; }  /* for book title only */
+  h2.title, p.subtitle.level-1 { font-size: 150%; margin-top: 4.5em;  margin-bottom: 2em }
+  h3.title, p.subtitle.level-2 { font-size: 120%; margin-top: 2.25em; margin-bottom: 1.25em }
+  h4.title, p.subtitle.level-3 { font-size: 100%; margin-top: 1.5em;  margin-bottom: 1.5em;  font-weight: bold; }
+  h5.title, p.subtitle.level-4 { font-size:  89%; margin-top: 1.87em; margin-bottom: 1.69em; font-style: italic; }
+  h6.title, p.subtitle.level-5 { font-size:  60%; margin-top: 3.5em;  margin-bottom: 2.5em }
+
+  /* title page */
+
+  h1.document-title, 
+  p.document-subtitle     { text-align: center }
+
+  div.titlepage,
+  #pg-header,
+  h1.document-title       { margin: 10% 0 5% 0 }
+  p.document-subtitle     { margin:  0  0 5% 0 }
+
+  /* PG header and footer */
+  #pg-machine-header { }
+  #pg-produced-by { }
+
+  li.toc-entry            { list-style-type: none }
+  ul.open li, ol.open li  { margin-bottom: 1.5em }
+
+  p.attribution           { margin-top: 0; text-align: right }
+
+  .example-rendered { 
+    margin: 1em 5%; border: 1px dotted red;  padding: 1em; background-color: #ffd }
+  .literal-block.example-source   { 
+    margin: 1em 5%; border: 1px dotted blue; padding: 1em; background-color: #eef }
+
+  /* DROPCAPS */
+
+  /* BLOCKQUOTES */
+
+  blockquote { margin: 1.5em 10% }
+
+  blockquote.epigraph { }
+
+  blockquote.highlights { }
+
+  div.local-contents { margin: 1.5em 10% }
+
+  div.abstract { margin: 3em 10% }
+  div.caption  { margin: 1.5em 10%; text-align: center; font-style: italic }
+  div.legend   { margin: 1.5em 10% }
+
+  .hidden { display: none }
+
+  .invisible { visibility: hidden; color: white } /* white: mozilla print bug */
+
+  a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+  dl.docutils dd {
+  margin-bottom: 0.5em }
+
+  div.figure { margin: 3em 0 }
+
+  img { max-width: 100% }
+
+  div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+  div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+  div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+  div.topic {
+  margin: 3em 0 }
+
+  ol.simple, ul.simple { margin: 1.5em 0 }
+
+  ol.toc-list,    ul.toc-list    { padding-left:  0  }
+  ol ol.toc-list, ul ul.toc-list { padding-left:  5% }
+
+  ol.arabic {
+  list-style: decimal }
+
+  ol.loweralpha {
+  list-style: lower-alpha }
+
+  ol.upperalpha {
+  list-style: upper-alpha }
+
+  ol.lowerroman {
+  list-style: lower-roman }
+
+  ol.upperroman {
+  list-style: upper-roman }
+
+  p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+  p.label {
+  white-space: nowrap }
+
+  p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+  p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+  p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  p.topic-title {
+  font-weight: bold }
+
+  pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+  .literal-block, .doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em; }
+
+  span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+  span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  span.interpreted {
+  font-family: sans-serif }
+
+  span.option {
+  white-space: nowrap }
+
+  span.pre {
+  white-space: pre }
+
+  span.problematic {
+  color: red }
+
+  span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 100% }
+
+  table { margin-top: 1.5em; margin-bottom: 1.5em; border-spacing: 0 }
+  table.align-left, table.align-right { margin-top: 0 }
+
+  table.table                { border-collapse: collapse; }
+  table.table thead          { border: 1px solid black; border-width: 2px 0 0 }
+  table.table tbody          { border: 1px solid black; border-width: 2px 0 }
+  table.table tr             { border: 1px solid black; border-width: 0 0 1px }
+  table.table tr.last        { border-width: 0 }
+  table.table td, 
+  table.table th             { padding: 1ex 1em; vertical-align: middle }
+
+  table.table.norules tr             { border-width: 0 }
+  table.table.norules td, 
+  table.table.norules th             { padding: 0.5ex 1em }
+  table.table.norules tr.first td    { padding-top: 1ex }
+  table.table.norules tr.last td     { padding-bottom: 1ex }
+  table.table.norules tr.first th    { padding-top: 1ex }
+  table.table.norules tr.last th     { padding-bottom: 1ex }
+
+
+  table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+  table.docinfo {
+  margin: 3em 4em }
+
+  table.docutils { }
+
+  tr.footnote.footnote td, tr.footnote.footnote th { 
+  padding: 0 0.5em 1.5em;
+  }
+
+  table.docutils td, table.docutils th,
+  table.docinfo td, table.docinfo th {
+  padding: 0 0.5em;
+  vertical-align: top }
+
+  table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+  /* used to remove borders from tables and images */
+  .borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+  table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "!important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 } /* FIXME: was !important */
+
+  h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+  h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+  ul.auto-toc {
+  list-style-type: none }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg HTML docutils stylesheet.
+
+  This stylesheet contains styles specific to HTML.
+  */
+
+  /* FONTS */
+
+  em                { font-style: normal }
+  strong            { font-weight: normal }
+  .small-caps       { font-variant: small-caps }
+  .gesperrt         { letter-spacing: 0.1em }
+
+  /* ALIGN */
+
+  .align-left       { clear: left;
+                    float: left;
+                    margin-right: 1em }
+
+  .align-right      { clear: right;
+                    float: right;
+                    margin-left: 1em }
+
+  .align-center     { margin-left: auto;
+                    margin-right: auto }
+
+  div.shrinkwrap    { display: table; }
+
+  /* SECTIONS */
+
+  body              { margin: 5% 10% 5% 10% }
+
+  /* compact list items containing just one p */
+  li p.pfirst       { margin-top: 0; margin-bottom: 0 } 
+
+  .first            { margin-top: 0 !important } 
+  .last             { margin-bottom: 0 !important }
+
+  .dropcap          { float: left; }
+  span.dropcap      { margin: 0 0.1em 0 0; line-height: 1 }
+  img.dropcap       { margin: 0 0.5em 0 0; }
+
+  /* PAGINATION */
+
+  @media screen {
+   .coverpage, .frontispiece, .titlepage, .verso, 
+   .contents, .foreword, .preface, .introduction, .dedication, .prologue,
+   .epilogue, .appendix, .glossary, .bibliography, .index, .colophon,
+   .footnotes, .plainpage
+                      { margin: 10%  0 }
+   .clearpage         { margin: 10% }
+   .cleardoublepage   { margin: 10% }
+   .vfill             { margin:  5% 10% }
+  }
+
+  @media print {
+    /* margin-top disappears after a page-break, thus padding */
+   .frontispiece, .verso, .plainpage, .section.level-2,
+   .clearpage         { page-break-before: always; padding-top: 1px }
+
+   .coverpage, .titlepage, 
+   .contents, .foreword, .preface, .introduction, .dedication, .prologue,
+   .epilogue, .appendix, .glossary, .bibliography, .index, .colophon,
+   .footnotes,
+   .cleardoublepage   { page-break-before: right; padding-top: 1px }
+
+   .vfill             { margin-top: 20% }
+   h2.title           { margin-top: 20% }
+  }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  .pageno       { position: absolute; right: 95%; font: medium sans-serif; }
+  .pageno:after { color: gray; content: '[' attr(title) ']' }
+  .toc-pageref  { float: right }
+  pre           { font-family: monospace; font-size: 0.9em; white-space: pre-wrap }
+  /*]]>*/
+  </style>
+</head>
+<body>
+  <div class="document" id="dopo-il-veglione-o-viceversa">
+    <h1 class="document-title level-1 pfirst title">Dopo il veglione o viceversa</h1><!-- -*- encoding: utf-8 -*- -->
+    <div class="container coverpage">
+      <div class="align-center auto-scaled figure" style="margin-left: 24%; width: 51%"><img style="display: block; width: 100%" alt="images/cover.jpg" src="images/cover.jpg" width="100%" /></div>
+    </div>
+    <div class="container titlepage">
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="large">ROBERTO BRACCO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="xx-large">TEATRO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="large">VOLUME PRIMO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          NON FARE AD ALTRI... — LUI LEI LUI —
+        </div>
+        <div class="line">
+          UN'AVVENTURA DI VIAGGIO — UNA DONNA —
+        </div>
+        <div class="line">
+          LE DISILLUSE — <strong class="bold">DOPO IL VEGLIONE</strong>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="small">2ª EDIZIONE.</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          REMO SANDRON — Editore
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="small">Libraio della Real Casa</span>
+        </div>
+        <div class="line">
+          <span class="small">MILANO-PALERMO-NAPOLI</span>
+        </div>
+      </div>
+    </div>
+    <div class="container verso">
+      <p class="center pfirst">PROPRIETÀ LETTERARIA</p>
+      <blockquote>
+        <div>
+          <p class="pfirst small"><em class="italics">I diritti di riproduzione e di traduzione sono riservati per tutti i paesi, non escluso il Regno di Svezia e quello di Norvegia.</em></p>
+          <p class="pnext small">È assolutamente proibito di rappresentare questi lavori senza il consenso scritto dell'Autore <em class="italics">(Art. 14 del Testo Unico 17 Settembre 1882)</em>.</p>
+          <p class="pnext small">Published in Palermo, 10th. June Privilege of Copyright in the United States reserved under the Act approved March 3rd. 1905, by Roberto Bracco and Remo Sandron.</p>
+          <p class="pnext small">Off. Tip. Sandron — 126 — I — 290312.</p>
+        </div>
+      </blockquote>
+    </div>
+    <hr class="docutils" />
+    <div class="clearpage"></div>
+    <div class="center line-block noindent outermost">
+      <div class="line">
+        <span class="x-large">DOPO IL VEGLIONE</span>
+      </div>
+      <div class="line">
+        &nbsp;
+      </div>
+      <div class="line">
+        o
+      </div>
+      <div class="line">
+        &nbsp;
+      </div>
+      <div class="line">
+        <span class="x-large">VICEVERSA</span>
+      </div>
+    </div>
+    <p class="pfirst">(Scherzo comico per <em class="italics">cafè-chantant</em>, musicato dal Maestro <span class="small-caps">Umberto Mazzone</span>, scritto apposta per <span class="small-caps">Nicola Maldagea</span> e <span class="small-caps">Amelia Faraone</span>, eseguito per la prima volta al <em class="italics">Salone Margherita</em> di <em class="italics">Napoli</em>, nel 1893).</p>
+    <div class="clearpage"></div>
+    <p class="pnext"><span class="invisible pageno target" title="354" id="page-354"></span> <span class="invisible pageno target" title="355" id="page-355"></span></p>
+    <p class="center large pnext">PERSONAGGI:</p>
+    <blockquote>
+      <div>
+        <div class="large line-block outermost">
+          <div class="line">
+            <span class="small-caps">Lui</span> e <span class="small-caps">Lei</span>.
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <p class="pfirst">La scena rappresenta un elegante salottino intimo con un paravento.</p>
+    <p class="pnext"><span class="invisible pageno target" title="356" id="page-356"></span> <span class="invisible pageno target" title="357" id="page-357"></span></p>
+    <div class="level-2 section" id="scena-unica">
+      <h2 class="center level-2 pfirst section-title title">SCENA UNICA.</h2>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span> e <span class="small-caps">Lei</span> entrano.
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">Lei è vestita da uomo. Lui, «viceversa», è vestito da donna. E tutti e due portano il domino e la maschera.</em></p>
+      <p class="pnext"><em class="italics">Lui si burla di Lei, e Lei si burla di Lui.</em></p>
+      <p class="pnext"><em class="italics">Dal cappuccio di Lei scappano i riccioli della parrucca maschile; da quello di Lui scappano i riccioli della parrucca femminile.</em></p>
+      <p class="pnext"><em class="italics">Sicchè, Lui è convinto che Lei sia un uomo: Lei è convinta che Lui sia una donna.</em></p>
+      <p class="pnext"><em class="italics">Lei si avanza conducendo Lui, graziosamente, per mano.</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(imitando una voce maschile)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Siam giunti, mascherina....
+            </div>
+            <div class="line">
+              Vi prego, favorite:
+            </div>
+            <div class="line">
+              la casa è un po' piccina:
+            </div>
+            <div class="line">
+              è casa da <em class="italics">garçon</em>.
+            </div>
+            <div class="line">
+              Non è degna di voi,
+            </div>
+            <div class="line">
+              lo so, ma compatite....
+            </div>
+            <div class="line">
+              <span class="invisible pageno target" title="358" id="page-358"></span>
+            </div>
+            <div class="line">
+              chè, in fin dei conti, poi,
+            </div>
+            <div class="line">
+              in due ci si sta ben.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(imitando una voce femminile)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Perchè vi confondete?
+            </div>
+            <div class="line">
+              Non sono una regina...
+            </div>
+            <div class="line">
+              Tutt'altro! Mi potete
+            </div>
+            <div class="line">
+              trattare <em class="italics">sans façon</em>.
+            </div>
+            <div class="line">
+              Io faccio, lo confesso,
+            </div>
+            <div class="line">
+              o un po' la ballerina
+            </div>
+            <div class="line">
+              o... quel che faccio adesso:
+            </div>
+            <div class="line">
+              ecco, nè più nè men.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(tra sè)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Mi par che se la beva:
+            </div>
+            <div class="line">
+              mi tratta da merlotto!
+            </div>
+            <div class="line">
+              Non sa qual figlia... d'Eva
+            </div>
+            <div class="line">
+              le si nasconde in me!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(tra sè)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ch'io sia davvero donna
+            </div>
+            <div class="line">
+              convinto è il giovinotto.
+            </div>
+            <div class="line">
+              Non sa sotto la gonna
+            </div>
+            <div class="line">
+              che pezzo d'uomo c'è.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span> e <span class="small-caps">Lei</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(insieme — ognuno per conto suo)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Oh! Sesso, mio nemico!
+            </div>
+            <div class="line">
+              Perchè non sei diverso?
+            </div>
+            <div class="line">
+              <span class="invisible pageno target" title="359" id="page-359"></span>
+            </div>
+            <div class="line">
+              Dice quel motto antico:
+            </div>
+            <div class="line">
+              «ciò che si lascia è perso.»
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Poi Lei, accennando a Lui, e Lui, accennando a Lei:)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              E che farà
+            </div>
+            <div class="line">
+              quando per forza
+            </div>
+            <div class="line">
+              comparirà
+            </div>
+            <div class="line">
+              da questa scorza
+            </div>
+            <div class="line">
+              l'imprevedibile
+            </div>
+            <div class="line">
+              che dentro sta?
+            </div>
+            <div class="line">
+              Si morderà
+            </div>
+            <div class="line">
+              le dieci dita
+            </div>
+            <div class="line">
+              e imparerà
+            </div>
+            <div class="line">
+              che nella vita
+            </div>
+            <div class="line">
+              rompe le scatole
+            </div>
+            <div class="line">
+              la realtà.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Toglietevi la maschera,
+            </div>
+            <div class="line">
+              scopritevi il visino.
+            </div>
+            <div class="line">
+              Dagli occhi l'indovino:
+            </div>
+            <div class="line">
+              dev'essere divino!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Datemi il buon esempio,
+            </div>
+            <div class="line">
+              gentil giovanottino.
+            </div>
+            <div class="line">
+              È troppo sibillino
+            </div>
+            <div class="line">
+              cotesto mascherino.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(con seduzione)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Almen fate ch'io guardi
+            </div>
+            <div class="line">
+              un sol piedino vostro.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="360" id="page-360"></span><span class="small-caps">Lui</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(con timidità pudica)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              No, no, no, no!... Più tardi....
+            </div>
+            <div class="line">
+              Più tardi ve lo mostro.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Avete, tale e quale,
+            </div>
+            <div class="line">
+              l'aria d'una novizia!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ma pure, in generale,
+            </div>
+            <div class="line">
+              è sempre l'uom che inizia!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              E allora, o dolce incognita,
+            </div>
+            <div class="line">
+              sta ben: vi servirò.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Voltando le spalle e preparandosi a togliersi la maschera — tra sè:)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ho quasi quasi scrupolo
+            </div>
+            <div class="line">
+              di aver tardato un po'.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Sbrigatevi! Sbrigatevi!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Frenate l'ansietà.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(fingendo un accento di ansia infrenabile)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Non posso.... Il cor mi palpita....
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="361" id="page-361"></span><span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(buttando via il mascherino e sbottonando il domino, appare vestita da uomo, in frak e cravatta bianca: ma le forme del corpo ed il viso rivelano la perfetta muliebrità.)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Son donna: eccomi qua!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(tra sè)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Oh che fortuna!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="italics">(a lei)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Donna?
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ma sì! Donna! Donnissima!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(tra sè, tripudiante)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Non sa sotto la gonna
+            </div>
+            <div class="line">
+              che pezzo d'uomo c'è!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="italics">(a lei)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ne siete ben sicura?
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              O bella!... Sicurissima!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="362" id="page-362"></span><span class="small-caps">Lui</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(fra sè:)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Graziosa è l'avventura!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="italics">(a lei, ostentando incredulità)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Donna!?...
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Credete a me.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(tra sè:)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              In questa trappola
+            </div>
+            <div class="line">
+              che lei parò,
+            </div>
+            <div class="line">
+              lei stessa capita,
+            </div>
+            <div class="line">
+              e uscir non può.
+            </div>
+            <div class="line">
+              L'ora propizia
+            </div>
+            <div class="line">
+              attender vo'
+            </div>
+            <div class="line">
+              ed in questi abiti
+            </div>
+            <div class="line">
+              resto perciò.
+            </div>
+            <div class="line">
+              Funger da femmina
+            </div>
+            <div class="line">
+              non vorrei più,
+            </div>
+            <div class="line">
+              ma... è triste l'epoca:
+            </div>
+            <div class="line">
+              l'uomo... sta giù.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(tra sè:)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Si agita! Brontola!
+            </div>
+            <div class="line">
+              Ci spera ancor?
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Indicando con un dito il proprio viso)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              <span class="invisible pageno target" title="363" id="page-363"></span>
+            </div>
+            <div class="line">
+              Han forse gli uomini
+            </div>
+            <div class="line">
+              il mio color?...
+            </div>
+            <div class="line">
+              Se dall'equivoco
+            </div>
+            <div class="line">
+              non vengo fuor,
+            </div>
+            <div class="line">
+              lei non rinunzia
+            </div>
+            <div class="line">
+              al sogno d'or.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(accennando al frak e ai calzoni)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Queste visibili
+            </div>
+            <div class="line">
+              maschie virtù,
+            </div>
+            <div class="line">
+              per non più illuderla,
+            </div>
+            <div class="line">
+              butterò giù.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Corre in gran fretta dietro il paravento.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              E dite: m'è concesso
+            </div>
+            <div class="line">
+              saper che fate, adesso?
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(senza mostrarsi)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Io voglio del mio sesso
+            </div>
+            <div class="line">
+              riprendere possesso.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Sì, presto, presto, presto!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Mi svesto...
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(fa un movimento di contentezza.)</span>
+        </div>
+      </div>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="364" id="page-364"></span><span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              ... e mi rivesto.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Se vengo, vi molesto?
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(energicamente)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Restate lì.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(rassegnato)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ci resto.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Lui, or drizzandosi sulla punta dei piedi, ora guardando tra le connessure del paravento, ora salendo sopra una seggiola, assiste alla toletta di Lei, e si frega le mani, ammira, si entusiasma, s'inebria. Intanto, Lei, svestendosi, getta di qua dal paravento il parrucchino, il frak, il panciotto, la camicia, i calzoni, che Lui raccoglie, osserva, esamina.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(comparisce in abito molto femminile)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Sono pronta, amica mia.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Santi numi, com'è bella!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="365" id="page-365"></span><span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              E vi par che un uomo io sia?
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Non è faccia d'uomo quella!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(pavoneggiandosi, con le mani nei fianchi)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Osservate il corpicino....
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Oh! lo vedo ch'è un gioiello.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Osservatemi il piedino....
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Oh! non è piè d'uomo, quello!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Perdonate, dunque, cara,
+            </div>
+            <div class="line">
+              questo scherzo: è carnevale....
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(dimenticando di dover sembrar donna)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Vi perdonerò se avara
+            </div>
+            <div class="line">
+              non sarete voi con me....
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="366" id="page-366"></span><span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Che volete? Non comprendo.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Un bacino.... Non fa male!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(stringendosi nelle spalle)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ve lo do.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="center pfirst"><em class="italics">(per cortesia lo bacia, in fretta, sul mento.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Io ve lo rendo.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="italics">(la bacia sulla guancia.)</span>
+        </div>
+      </div>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Non c'è sugo....
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Sì che c'è!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="italics">(e tenta di abbracciarla.)</span>
+        </div>
+      </div>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ma, signora! Che vi piglia?
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(impappinandosi, cerca di giustificarsi)</em></p>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Mi sembrate... una mia zia...
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="367" id="page-367"></span><span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              In che cosa mi somiglia?!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(abbracciandola forte)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Una vera simmetria!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Basta!... basta!... Non stringete....
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Non la vedo da tanti anni!...
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Ma, in sostanza, voi... chi siete?
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(confuso)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Io?... Non sono... nei miei panni!...
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Corre, alla sua volta, dietro il paravento, portando seco gli abiti d'uomo che Lei indossava.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              E dite: m'è concesso
+            </div>
+            <div class="line">
+              saper che fate, adesso?
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="invisible pageno target" title="368" id="page-368"></span><span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Io voglio del mio sesso
+            </div>
+            <div class="line">
+              riprendere possesso.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(meravigliata)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              E che vuol dire questo?!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Mi svesto... e mi rivesto...
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Se vengo, vi molesto?
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(con entusiasmo)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Venite pur....
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(diffidente)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              No!... Resto.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(Ricomincia la mimica. Lei, come ha fatto Lui, punta dalla curiosità, cerca di vedere quel che avviene dietro il paravento; ed osserva, inquieta, la roba che Lui, svestendosi, le fa piovere addosso, cioè il domino, il mascherino, la parrucca, le imbottiture con cui aveva improvvisate le forme di donna.</em></p>
+      <p class="pnext"><span class="invisible pageno target" title="369" id="page-369"></span><em class="italics">Finalmente, vengono giù la gonna e la sottana. Lei, sempre più curiosa, sale sopra la seggiola, vede... e dà un grido quasi di spavento. Quindi scende precipitosamente, e, indignata, aspetta.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <p class="pfirst"><em class="italics">(comparisce, pavoneggiandosi, vestito degli abiti maschili di Lei, che gli vanno male; e, poichè Lei ha un gesto d'ira e di sdegno, le si ginocchia ai piedi.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Voi, dunque, siete un uomo?!
+            </div>
+            <div class="line">
+              Se non uscite subito,
+            </div>
+            <div class="line">
+              chiamo la polizia!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(umilmente)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Sì... forse sono un uomo;
+            </div>
+            <div class="line">
+              ma vi prego di credere
+            </div>
+            <div class="line">
+              ... che non è colpa mia.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <p class="pfirst"><em class="italics">(A poco a poco, Lei s'intenerisce e gli apre le braccia.)</em></p>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Sarai mio prigioniero
+            </div>
+            <div class="line">
+              insino al far del giorno.
+            </div>
+            <div class="line">
+              Del mondo, ch'è ciarliero,
+            </div>
+            <div class="line">
+              non me ne importa un corno....
+            </div>
+            <div class="line">
+              <span class="invisible pageno target" title="370" id="page-370"></span>
+            </div>
+            <div class="line">
+              Nella prigione oscura
+            </div>
+            <div class="line">
+              io ti giudicherò,
+            </div>
+            <div class="line">
+              ma non aver paura:
+            </div>
+            <div class="line">
+              per te clemenza avrò!
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lui</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Sarò tuo prigioniero
+            </div>
+            <div class="line">
+              insino al far del giorno.
+            </div>
+            <div class="line">
+              Del mondo, ch'è ciarliero,
+            </div>
+            <div class="line">
+              non me ne importa un corno.
+            </div>
+            <div class="line">
+              Io non avrò paura,
+            </div>
+            <div class="line">
+              e a te mi affiderò
+            </div>
+            <div class="line">
+              in questa mia cattura,
+            </div>
+            <div class="line">
+              senza dir mai di no.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="small-caps">Lei</span> <em class="italics">e</em> <span class="small-caps">Lui</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="italics">(insieme)</span>
+        </div>
+      </div>
+      <blockquote>
+        <div>
+          <div class="line-block outermost">
+            <div class="line">
+              Non so chi sei, che fai,
+            </div>
+            <div class="line">
+              ma già ti voglio ben
+            </div>
+            <div class="line">
+              e so che m'amerai....
+            </div>
+            <div class="line">
+              fino a domani almen.
+            </div>
+            <div class="line">
+              Tra poco, o belle o brutte,
+            </div>
+            <div class="line">
+              in quella oscurità,
+            </div>
+            <div class="line">
+              ci sveleremo tutte
+            </div>
+            <div class="line">
+              le generalità.
+            </div>
+            <div class="line">
+              Ahimè, soltanto al buio
+            </div>
+            <div class="line">
+              non si nasconde niente.
+            </div>
+            <div class="line">
+              Può il buio, immantinente,
+            </div>
+            <div class="line">
+              scoprir... la verità.
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <div class="vspace" style="height: 2em"></div>
+      <p class="center pfirst"><em class="italics">(Qui, cala la tela, tardi ma in tempo.)</em></p>
+      <div class="vspace" style="height: 5em"></div>
+      <div class="backmatter"></div>
+    </div>
+  </div>
+</body>
+</html>
